@@ -46,19 +46,6 @@
 		</dependency>
 	</dependencies>
 
-	<profiles>
-		<!-- Javadoc throws lots of errors with Java 8, see also http://stackoverflow.com/a/26806103 -->
-		<profile>
-			<id>doclint-java8-disable</id>
-			<activation>
-				<jdk>[1.8,)</jdk>
-			</activation>
-			<properties>
-				<javadoc.opts>-Xdoclint:none</javadoc.opts>
-			</properties>
-		</profile>
-	</profiles>
-
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -116,17 +103,15 @@
 						<quiet>true</quiet>
 						<attach>false</attach>
 						<linksource>true</linksource>
+						<doclint>none</doclint>
 					</configuration>
 					<executions>
 						<execution>
 							<phase>verify</phase>
 							<id>verify-javadocs</id>
 							<goals>
-								<goal>jar</goal>
+								<goal>javadoc-no-fork</goal>
 							</goals>
-							<configuration>
-								<additionalparam>${javadoc.opts}</additionalparam>
-							</configuration>
 						</execution>
 					</executions>
 				</plugin>
