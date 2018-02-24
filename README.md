@@ -46,7 +46,7 @@ For more information:
  * see the package-info in `nl.fw.util.namedrespool`
  * see the JavaDocs (commments) in  `nl.fw.util.namedrespool.NamedResPool`
 
-On a side node, a simple resource pool for uniform resources that are managed by an external process is shown in [this](http://stackoverflow.com/a/34377106/3080094) stackoverflow answer.
+On a side node, a simple resource pool for uniform resources that are managed by an external process is shown in [this](https://stackoverflow.com/a/34377106) stackoverflow answer.
  
 ### Status ###
 
